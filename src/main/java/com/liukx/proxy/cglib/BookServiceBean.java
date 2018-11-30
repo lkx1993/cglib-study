@@ -5,6 +5,8 @@ package com.liukx.proxy.cglib;
  */
 public class BookServiceBean {
 
+    private String ss = "rrre";
+
     public BookServiceBean() {
         System.out.println("这是BookserviceBean的构造方法");
     }
