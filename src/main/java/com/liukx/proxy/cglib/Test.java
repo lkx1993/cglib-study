@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 public class Test {
 
     public static void main(String[] args) {
-        BookServiceBean bookServiceBean = BookServiceFactory.getProxyInstance(new MyCglibProxy("张三"));
+        BookServiceBean bookServiceBean = BookServiceFactory.getProxyInstance(new MyCglibProxy("张三q"));
         System.out.println(123);
         bookServiceBean.create();
         bookServiceBean.query();
@@ -26,6 +26,7 @@ public class Test {
             classInfo(proxy);
 
             createClassFile(proxy,"TempProxy");
+            createClassFile(origin,"origin");
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
